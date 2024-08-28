@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  mongo:
+    image: mongo:latest
+    volumes:
+      - mongodb:/data/db
+      - mongodb_config:/data/configdb
+    ports:
+      - '27017:27017'
+
+volumes:
+  mongodb:
+  mongodb_config:
